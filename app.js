@@ -13,6 +13,17 @@ const mole = document.getElementById("mole");
 mole.style.top = gameAreaHeight / 2 + "px";
 mole.style.left = gameAreaWidth / 2 + "px";
 
+// Reset Button
+const resetBtn = document.getElementById("reset");
+resetBtn.addEventListener("click", resetGame);
+
+function resetGame() {
+  score = 0;
+  scoreHeading.textContent = `${score}`;
+  mole.style.top = gameAreaHeight / 2 + "px";
+  mole.style.left = gameAreaWidth / 2 + "px";
+}
+
 // Shows and hides the mole at certain intervals, repeatedly
 setInterval(function() {
   hideShowMole();
@@ -22,7 +33,6 @@ setInterval(function() {
 mole.addEventListener("click", function() {
   score++;
   scoreHeading.textContent = `${score}`;
-  console.log(score);
   hideShowMole();
 });
 
@@ -56,7 +66,6 @@ function createInterval() {
   const timeIntervals = [250, 500, 1000, 1500, 2000];
   let interval = getRandomIntInclusive(0, 4);
   let timeInterval = timeIntervals[interval];
-  console.log(timeInterval);
   return timeInterval;
 }
 
@@ -70,11 +79,8 @@ function getRandomIntInclusive(min, max) {
 /***
  * TODO
  * Create an intro Modal, explain rules -- make the mole go away
- * Create a Lose moment -- maybe not since it can go on forever
  * Add an animation when the mole comes back after getting clicked -- just text/tooltip
- * Add an animation for click and miss, also maybe subtract a point
  * Multiply and shrink the mole when coming back after being clicked
  * Add a function when on hover every so often, the mole moves
  * Add a function when keydown (every so often), the mole moves
- * Add a start over button
  ***/
