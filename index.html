@@ -3,31 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Whack A Mole</title>
   </head>
   <body>
     <header>
+      <div class="container">
         <h1>Whack A Mole</h1>
-    </header>  
+        <h2 id="score">Score: <span></span></h3>
+        <button class="btn" id="reset">Restart</button>  
+      </div>
+    </header>
     <main id="game-area">
-        <img id="mole" src="img/mole.png" alt="Mole" />
+      <img id="mole" src="img/mole.png" alt="Mole" />
     </main>
     <footer>
-        <div class="container">
-            <div class="copyright">
-                <p>Whack a Mole</p>
-                <p>2020&copy; Dan Riches</p>
-            </div>
-            <div class="citing">
-                Icons made by
-                <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan"
-                  >Darius Dan</a
-                >
-                from
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-              </div>
+      <div class="container">
+        <div class="copyright">
+          <p>Whack a Mole</p>
+          <p>2020&copy; Dan Riches</p>
         </div>
+        <div class="citing">
+          Icons made by
+          <a
+            href="https://www.flaticon.com/authors/darius-dan"
+            title="Darius Dan"
+            >Darius Dan</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+      </div>
     </footer>
     <script src="app.js"></script>
   </body>
