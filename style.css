@@ -1,64 +1,72 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
 }
 
 .container {
-    width: 75%;
-    max-width: 1300;
-    margin: 0 auto;
+  width: 75%;
+  max-width: 1300;
+  margin: 0 auto;
 }
 
 main {
-    background-color: #dfd9d5;
-    height: calc(100vh - (69.33px + 50.67px));
-    position: relative;
+  background-color: #dfd9d5;
+  height: calc(100vh - (69.33px + 50.67px));
+  position: relative;
 }
 
-header, 
+header,
 footer {
-    background-color: #2e1602;
-    color: #c5b5a9;
-    padding: 1rem 0;
-}
-
-header {
-    text-align: center;
-    text-transform: uppercase;
+  background-color: #2e1602;
+  color: #c5b5a9;
+  padding: 1rem 0;
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
-footer .container {
-    display: flex;
-    justify-content: space-between;
+footer .container,
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container {
+  align-items: center;
 }
 
 .copyright {
-    display: flex;
+  display: flex;
 }
 
 .copyright p:first-child {
-    margin-right: 25px;
+  margin-right: 25px;
 }
 
 .citing a {
-    text-decoration: none;
-    color: #c5b5a9;
+  text-decoration: none;
+  color: #c5b5a9;
 }
 
 img {
-    width: 100px;
-    cursor: pointer;
-    position: absolute;
+  width: 100px;
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.4s ease-in;
 }
 
+img:active {
+  transform: rotate(360deg) scale(0);
+}
